@@ -3,15 +3,11 @@ package com.freshappbooks.retrofittest2;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.widget.Toast;
-
 import com.freshappbooks.retrofittest2.adapter.PostAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -29,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         posts = new ArrayList<>();
 
-        recyclerView = (RecyclerView) findViewById(R.id.posts_recycle_view);
+        recyclerView =  findViewById(R.id.posts_recycle_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
