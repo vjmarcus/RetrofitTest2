@@ -6,7 +6,7 @@
     android:layout_margin="8dp">
 
     <TextView
-        android:id="@+id/postitem_post"
+        android:id="@+id/post_item_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="?android:attr/textColorPrimary"
@@ -15,11 +15,11 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/postitem_site"
+        android:id="@+id/post_item_site"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bash.im"
-        android:layout_below="@+id/postitem_post"
+        android:layout_below="@+id/post_item_post"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:gravity="end"

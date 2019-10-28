@@ -6,17 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.freshappbooks.retrofittest2.PostModel;
 import com.freshappbooks.retrofittest2.R;
 
 import java.util.List;
 
-/**
- * Created by misha on 31.10.2016.
- */
+
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
@@ -35,11 +31,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         PostModel post = posts.get(position);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            holder.post.setText(Html.fromHtml(post.getElementPureHtml(), Html.FROM_HTML_MODE_LEGACY));
-        } else {
-            holder.post.setText(Html.fromHtml(post.getElementPureHtml()));
-        }
+        holder.post.setText(Html.fromHtml(post.getElementPureHtml()));
         holder.site.setText(post.getSite());
     }
 
@@ -56,8 +48,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-            post = (TextView) itemView.findViewById(R.id.postitem_post);
-            site = (TextView) itemView.findViewById(R.id.postitem_site);
+            post =  itemView.findViewById(R.id.post_item_post);
+            site =  itemView.findViewById(R.id.post_item_site);
         }
     }
 }
